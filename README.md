@@ -28,7 +28,7 @@ There are three shell scripts that control
 
 ## Sample Run
 
-```javascript
+```sh
 $ cd net43
 $ ls
 README.md   attach43.sh chaindata   js          launch43.sh stop43.sh
