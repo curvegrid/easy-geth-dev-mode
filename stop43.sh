@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LETH_TESTNET_BASEDIR=.
+LETH_TESTNET_CHAINDIR=${LETH_TESTNET_BASEDIR}/chaindata
+LETH_TESTNET_LOGDIR=${LETH_TESTNET_CHAINDIR}/log
+
+if [ -e ${LETH_TESTNET_LOGDIR}/geth.pid ]
+then
+	kill -INT $(cat ${LETH_TESTNET_LOGDIR}/geth.pid)
+	rm ${LETH_TESTNET_LOGDIR}/geth.pid
+fi

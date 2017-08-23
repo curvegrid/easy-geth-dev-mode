@@ -1,0 +1,10 @@
+#!/bin/bash
+
+LETH_TESTNET_BASEDIR=.
+LETH_TESTNET_JSDIR=${LETH_TESTNET_BASEDIR}/js
+LETH_TESTNET_CHAINDIR=${LETH_TESTNET_BASEDIR}/chaindata
+
+LETH_TESTNET_JSHELPER=${LETH_TESTNET_JSDIR}/useful-geth-snippets.js
+
+# attach to the node
+geth --preload ${LETH_TESTNET_JSHELPER} attach ${LETH_TESTNET_CHAINDIR}/geth.ipc
