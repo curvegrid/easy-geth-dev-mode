@@ -28,7 +28,7 @@ There are three shell scripts that control
 
 ## Sample Run
 
-```sh
+```javascript
 $ cd net43
 $ ls
 README.md   attach43.sh chaindata   js          launch43.sh stop43.sh
@@ -37,12 +37,34 @@ $ ./launch43.sh
 Welcome to the Geth JavaScript console!
 
 instance: Geth/v1.6.1-stable-021c3c28/darwin-amd64/go1.8.1
-coinbase: 0x49ea302faac79a965875b282d1c50bd5f319fc16
+coinbase: 0x49ea302faac79abc5875b282d1c50bd5f319fc16
 at block: 11 (Wed, 23 Aug 2017 10:35:30 JST)
  datadir: /Users/jeff/projects/curvegrid/consensysacademy/net43/chaindata
  modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 shh:1.0 txpool:1.0 web3:1.0
 
 >
+> // Note that auto-mining is enabled, so mining will start if transactions are waiting and will stop if no transactions are pending
+>
+> personal.unlockAccount(eth.accounts[0])
+Unlock account 0x49ea302faac79abc5875b282d1c50bd5f319fc16
+Passphrase: 
+true
+> var txHash = eth.sendTransaction({ from: eth.accounts[0], data: "0x6003600501600203600053" })
+undefined
+> eth.getTransactionReceipt(txHash)
+{
+  blockHash: "0x491d815305875bf2a080edec3e9d393027953c9a089eaff037b2e02576092f3e",
+  blockNumber: 13,
+  contractAddress: "0x268066bf71717c0a76c500cf4a3abda1a4e8c87b",
+  cumulativeGasUsed: 53708,
+  from: "0x49ea302faac79abc5875b282d1c50bd5f319fc16",
+  gasUsed: 53708,
+  logs: [],
+  logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  root: "0x274cb39cd6f1b58308e0d65b09a17266660d97fc72860cacd3a234563020b53e",
+  to: null,
+  transactionHash: "0x9697f0700bd742df516487f2b69e6bdeeea07f6e1a786541bb323fe12823fb50",
+  transactionIndex: 0
 >
 > exit
 
@@ -52,7 +74,7 @@ $ ./attach43.sh
 Welcome to the Geth JavaScript console!
 
 instance: Geth/v1.6.1-stable-021c3c28/darwin-amd64/go1.8.1
-coinbase: 0x49ea302faac79a965875b282d1c50bd5f319fc16
+coinbase: 0x49ea302faac79abc5875b282d1c50bd5f319fc16
 at block: 11 (Wed, 23 Aug 2017 10:35:30 JST)
  datadir: /Users/jeff/projects/curvegrid/consensysacademy/net43/chaindata
  modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 shh:1.0 txpool:1.0 web3:1.0
