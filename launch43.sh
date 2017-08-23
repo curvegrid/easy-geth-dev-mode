@@ -15,6 +15,7 @@ mkdir -p ${LETH_TESTNET_LOGDIR}
 if [ -e ${LETH_TESTNET_LOGDIR}/geth.pid ]
 then
 	echo "geth net43 testnet appears to be running or zombie pid file remains at '${LETH_TESTNET_LOGDIR}/geth.pid'"
+	echo "Try running 'stop43.sh' to make it exit."
 	exit 1
 fi
 
