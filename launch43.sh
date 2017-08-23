@@ -19,7 +19,7 @@ then
 fi
 
 # Do not enable RPC by default
-if [ "--startrpc" -eq "$1" ]
+if [ "--startrpc" == "$1" ]
 then
 	echo "== Enabling RPC"
 	LETH_TESTNET_STARTRPC=${LETH_TESTNET_JSDIR}/start-rpc.js
