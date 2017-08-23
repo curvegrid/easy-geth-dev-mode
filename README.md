@@ -4,7 +4,7 @@ Simple scripts to launch geth (Go Ethereum) in dev mode
 ## Introduction
 Geth (Go Ethereum) dev mode is a way of starting geth with a default genesis block and low proof of work setting that never increases. Mining is very fast (~1 second/block) even on constrained hardware, such as an old laptop. The chain data directory occupies a few kilobytes. Other sane settings are also set behind the scenes, such as disabled RPC and max peer count of 1.
 
-The scripts contained in this repo make things even easier, by providing single command launch, attach and stop functionality; auto-mining when transactions are present; hiding mining console output; and optional RPC enablement.
+The scripts contained in this repo make things even easier, by providing single command launch, attach and stop functionality; auto-mining when transactions are waiting; auto-create coinbase account and mine some Ether to it at first run; hiding mining console output; and optional RPC enablement.
 
 For more on the details of geth dev mode in general, see our [blog post](http://blog.curvegrid.com/daysofblock/2017/06/14/daysofblock-05-testing-dapp-first-principles.html#gethdevmode) on the subject.
 
