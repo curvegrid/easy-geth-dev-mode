@@ -18,7 +18,7 @@ First, clone the repo. We'll clone it into a directory called `net43`, which is 
 git clone https://github.com/curvegrid/easy-geth-dev-mode.git ./net43
 ```
 
-There are three shell scripts that control
+Three shell scripts are provided:
 
 * `launch43.sh`: Launch an underlying geth instance in dev mode in order hide mining console output, then attach to it with an interactive geth instance. RPC is disabled by default but can be enabled by specifying the `--startrpc` command line option.
 
