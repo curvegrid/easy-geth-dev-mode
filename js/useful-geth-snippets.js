@@ -4,7 +4,7 @@ var mining_threads = 1
 if( personal.listAccounts.length === 0 ) {
   console.log("== No wallets found, creating one.");
 
-  var password = "password"
+  var password = ""
   var masterAcct = personal.newAccount(password);
 
   miner.setEtherbase(masterAcct);
