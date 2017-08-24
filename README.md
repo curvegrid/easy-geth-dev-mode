@@ -84,5 +84,5 @@ $ ./stop43.sh
 $
 ```
 
-## Useful geth snippets
+## Useful Geth Snippets
 The JavaScript code in `js/useful-geth-snippets.js` is preloaded into geth by `launch43.sh` and `attach43.sh`. It contains the auto-mining code along with a utility function `getTransactionsByAccount()` which prints select or all transactions within the last 1000 blocks mined. This file would be a good place to place other snippets you would like pre-loaded into geth.
