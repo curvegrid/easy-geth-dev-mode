@@ -23,7 +23,7 @@ if( personal.listAccounts.length === 0 ) {
 
 // Mine only when there are transactions
 function checkWork() {
-    if (eth.getBlock("pending").transactions.length > 0) {
+    if (Object.keys(txpool.content.pending).length > 0) {
         if (eth.mining) return;
         console.log("== Pending transactions! Mining...");
         miner.start(mining_threads);
