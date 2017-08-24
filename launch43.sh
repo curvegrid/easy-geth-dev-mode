@@ -5,7 +5,7 @@ GETH_TESTNET_JSDIR=${GETH_TESTNET_BASEDIR}/js
 GETH_TESTNET_CHAINDIR=${GETH_TESTNET_BASEDIR}/chaindata
 GETH_TESTNET_LOGDIR=${GETH_TESTNET_CHAINDIR}/log
 
-GETH_TESTNET_JSHELPER=${GETH_TESTNET_JSDIR}/useful-geth-snippets.js
+GETH_TESTNET_JSHELPER=${GETH_TESTNET_JSDIR}/base-geth-snippets.js
 
 # create chaindir and logging folder tree if doesn't already exist
 mkdir -p ${GETH_TESTNET_CHAINDIR}
