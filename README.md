@@ -4,7 +4,7 @@ Simple scripts to launch geth (Go Ethereum) in dev mode
 ## Introduction
 Geth (Go Ethereum) dev mode is a way of starting geth with a default genesis block and low proof of work setting that never increases. Mining is very fast (~1 second/block) even on constrained hardware, such as an old laptop. The chain data directory occupies a few kilobytes. Other sane settings are also set behind the scenes, such as disabled RPC and max peer count of 1.
 
-The scripts contained in this repo make things even easier, by providing single command launch, attach and stop functionality; auto-mining when transactions are waiting; auto-create coinbase account and mine some Ether to it at first run; hiding mining console output; and optional RPC enablement.
+The scripts contained in this repo make things even easier, by providing single command launch, attach and stop functionality; auto-mining when transactions are waiting; auto-creating coinbase account and mine some Ether to it at first run; hiding mining console output; and optional RPC enablement.
 
 For more on the details of geth dev mode in general, see our [blog post](http://blog.curvegrid.com/daysofblock/2017/06/14/daysofblock-05-testing-dapp-first-principles.html#gethdevmode) on the subject.
 
@@ -85,3 +85,7 @@ at block: 11 (Wed, 23 Aug 2017 10:35:30 JST)
 $ ./stop43.sh 
 $
 ```
+
+## Useful geth snippets
+
+The JavaScript code in `js/useful-geth-snippets.js` is preloaded into geth by `launch43.sh` and `attach43.sh`. It contains the auto-mining code along with a utility function `getTransactionsByAccount()` which prints select or all transactions within the last 1000 blocks mined. This file would be a good place to place other snippets you would like pre-loaded into geth.
