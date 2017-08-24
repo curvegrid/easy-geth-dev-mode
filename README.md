@@ -9,7 +9,6 @@ The scripts contained in this repo make things even easier, by providing single 
 For more on the details of geth dev mode in general, see our [blog post](http://blog.curvegrid.com/daysofblock/2017/06/14/daysofblock-05-testing-dapp-first-principles.html#gethdevmode) on the subject.
 
 ## Usage
-
 This has been tested on macOS and Linux. Cygwin on Windows might also work out of the box.
 
 First, clone the repo. We'll clone it into a directory called `net43`, which is just a play on the fact that 42 is a commonly used network ID for test networks and 43 is one more than that.
@@ -27,7 +26,6 @@ Three shell scripts are provided:
 * `stop43.sh`: Quit the underlying geth instance. Any additionally attached instances will continue to run and will need to be exited via CTRL+C or by typing `exit` assuming they are interactive, or killing them manually if they are not.
 
 ## Sample Run
-
 ```sh
 $ cd net43
 $ ls
@@ -87,5 +85,4 @@ $
 ```
 
 ## Useful geth snippets
-
 The JavaScript code in `js/useful-geth-snippets.js` is preloaded into geth by `launch43.sh` and `attach43.sh`. It contains the auto-mining code along with a utility function `getTransactionsByAccount()` which prints select or all transactions within the last 1000 blocks mined. This file would be a good place to place other snippets you would like pre-loaded into geth.
