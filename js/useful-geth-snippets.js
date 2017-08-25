@@ -1,3 +1,8 @@
+// Prompt to unlock eth.accounts[0]
+function pua0() {
+  return personal.unlockAccount(eth.accounts[0]);
+}
+
 // Adapted from: https://ethereum.stackexchange.com/questions/2531/common-useful-javascript-snippets-for-geth 
 
 // Print all transactions for the last 1000 blocks
