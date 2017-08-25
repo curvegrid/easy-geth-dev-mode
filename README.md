@@ -87,4 +87,8 @@ $
 ## Useful Geth Snippets
 The JavaScript code in `js/base-geth-snippets.js` is preloaded into the underlying geth instance by `launch43.sh` and contains the auto-mining code.
 
-The interactive geth instances subsequently launched and attached to the underlying geth instance by both `launch43.sh` and `attach43.sh` then preload `js/useful-geth-snippets.js`, which for now includes a utility function `getTransactionsByAccount()` that prints select or all transactions within the last 1000 blocks mined. This file would be a good place to place other snippets you would like preloaded into geth.
+The interactive geth instances subsequently launched and attached to the underlying geth instance by both `launch43.sh` and `attach43.sh` then preload `js/useful-geth-snippets.js`. The utility functions are:
+
+* `pua0()` is a simple shortcut for `personal.unlockAccount(eth.accounts[0])`.
+
+* `getTransactionsByAccount()` prints select or all transactions within the last 1000 blocks mined. This file would be a good place to place other snippets you would like preloaded into geth. See code for more hints on usage.
