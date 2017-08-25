@@ -44,7 +44,8 @@ at block: 11 (Wed, 23 Aug 2017 10:35:30 JST)
 > // Note that auto-mining is enabled, so mining will start if transactions 
 > // are pending and will stop if no transactions are pending
 >
-> personal.unlockAccount(eth.accounts[0])
+> // Helper function which acts as an alias for personal.unlockAccount(eth.accounts[0])
+> pua0()
 Unlock account 0x49ea302faac79abc5875b282d1c50bd5f319fc16
 Passphrase: 
 true
